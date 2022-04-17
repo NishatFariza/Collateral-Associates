@@ -1,5 +1,5 @@
 .banner{
-    height: 100vh;
+    min-height: 650px;
     background-blend-mode: overlay;
     background-color: rgba(0, 0, 0, 0.64);
     background-image: url(../../../images/banner-bg.jpg);
@@ -11,25 +11,63 @@
 }
 
 .banner-content-wrap{
-    padding: 4rem 2rem;
+    /* padding: 4rem 2rem; */
     width: 60%;
 }
-.banner-content-wrap h1{
-   font-size: 3.8rem;
-   line-height: 1.5em;
+.banner-content-wrap h1 {
+    font-size: 3.8rem;
+    /* line-height: 1.5em; */
+    max-width: 709px;
+    margin: 0 auto;
 }
 
 .banner-caption{
     color: #af864d;
 }
 
+.banner-btn{
+    background-color: #af864d;
+    transition: .5s;
+    
+}
+.banner-btn:hover{
+    background-color: #5B4628;
+
+}
+.banner-btn-2{
+    background-color: transparent;
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    transition: .5s;
+}
+.banner-btn-2:hover{
+    background-color: #5B4628;
+    border: 1px solid rgba(255, 255, 255, 0.12);
+}
+
 
 .banner-img-wrap{
- width: 300px;
- height: 300px;
+ width: 350px;
+ height: 350px;
  border-radius: 100%;
- background-color: rgba(119, 119, 119, 0.274);
- background-image: url();
+ background-color: rgba(255, 255, 255, 0.16);
+ background-image: url(../../../images/corner.png);
+ background-position: right;
+ background-repeat: no-repeat;
+ background-size: contain;
  
 
+}
+/*Make banner responsive */
+@media screen and (max-width:576px){
+    .banner{
+            height: 800px;
+      
+    }
+    .banner-caption {
+        font-size: 14px;
+    }
+    .banner-content-wrap h1 {
+        font-size: 1.2rem;
+    }
+    
 }

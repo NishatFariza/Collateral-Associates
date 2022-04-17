@@ -11,3 +11,10 @@ body{
 .primary-color{
   color: #AF864D;
 }
+.divider{
+  width: 70px;
+  height: 4px;
+  border-radius: 20px;
+  background-color: #AF864D;
+  margin: auto;
+}
