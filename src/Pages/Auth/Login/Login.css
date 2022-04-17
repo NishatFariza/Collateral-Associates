@@ -1,0 +1,31 @@
+.login-form{
+    width: 30%;
+    box-shadow: rgba(17, 17, 26, 0.1) 0px 4px 16px, rgba(17, 17, 26, 0.1) 0px 8px 24px, rgba(17, 17, 26, 0.1) 0px 16px 56px;
+}
+
+.login-btn{
+    padding: .6rem 1.6rem;
+    background-color: #af864d;
+    transition: .5s;
+    margin-right: 1rem;
+    
+}
+.login-btn:hover{
+    background-color: #5B4628;
+
+}
+
+/*Make responsive of tablet*/
+@media screen and (max-width:992px) {
+    .login-form{
+        width: 50%;
+    }
+    
+}
+/*Make responsive of mobile*/
+@media screen and (max-width:576px) {
+    .login-form{
+        width: 90%;
+    }
+    
+}
