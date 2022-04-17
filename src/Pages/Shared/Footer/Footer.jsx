@@ -6,6 +6,8 @@ import { FaLinkedinIn } from "react-icons/fa";
 import { Link } from "react-router-dom";
 
 const Footer = () => {
+  const today = new Date();
+  const year = today.getFullYear();
   return (
     <div className="py-4 bg-dark mt-5 mx-4 rounded">
       <div className="w-75 mx-auto p-4 footer-wrapper d-flex justify-content-center align-items-center">
@@ -24,7 +26,7 @@ const Footer = () => {
         </div>
       </div>
       <div>
-        <h6 className="w-75 mx-auto p-3 text-light">hhhhhhhhhhhh</h6>
+        <p className="w-75 mx-auto p-3 text-muted">Copyright &copy; {year}</p>
       </div>
     </div>
   );
