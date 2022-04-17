@@ -1,10 +1,15 @@
-.service-wrap{
-    height: 100vh;
+.services-wrap {
     background-color: rgba(0, 0, 0, 0.8);
     background-blend-mode: overlay;
     background-image: url(../../../images/services-image.jpg);
 }
-.service-title-wrap{
+.services-title-wrap{
     border-top: 0.0625em solid hsla(0, 0%, 100%, 0.16);
     border-bottom: 0.0625em solid hsla(0, 0%, 100%, 0.16);
+}
+.services-grid-container{
+    
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap:3rem;
 }
