@@ -14,3 +14,17 @@
 }
 
 /*Make Mobile Responsive*/
+@media screen and (max-width:576px){
+    .services-grid-container{
+        grid-template-columns: repeat(1, 1fr);
+       
+    }
+    
+}
+@media screen and (min-width:577px) and (max-width:992px){
+    .services-grid-container{
+        grid-template-columns: repeat(2, 1fr);
+       
+    }
+    
+}

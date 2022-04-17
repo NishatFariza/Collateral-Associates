@@ -4,7 +4,7 @@ import bannerImg from "../../../images/hero-lawyer-image.png";
 
 const Banner = () => {
   return (
-    <div className="banner d-flex flex-column flex-md-row justify-content-center align-items-center">
+    <div className="banner d-flex flex-column flex-md-column flex-lg-row justify-content-center align-items-center">
       <div className="banner-content-wrap text-center text-white mb-5">
         <p className="banner-caption text-uppercase">
           skipping bail - since 2020

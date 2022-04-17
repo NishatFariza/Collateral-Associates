@@ -95,11 +95,32 @@
 
 
 /*Tablet and desktop responsive*/
-@media screen and (min-width:577px) and (max-width:992px) {
-    .services-container{
-        grid-template-columns: repeat(2, 1fr);
+@media screen and (max-width:992px) {
+    .banner {
+        height: 730px;
     }
-    .services-title{
-        font-size: 28px;
+    .banner-caption {
+        font-size: 10px;
     }
+    .banner-content-wrap h1 {
+        font-size: 1.6rem;
+    }
+    .banner-btn {
+        padding: .5rem 1.2rem;
+        margin-bottom: 1rem;
+        margin-right: 0;
+    }
+    .banner-btn-2 {
+        padding: .5rem 1.2rem;
+        
+    }
+    .banner-img{
+        width: 75%;
+    }
+
+    .banner-img-wrap {
+        width: 280px;
+        height: 280px;
+    }
+    
 }
