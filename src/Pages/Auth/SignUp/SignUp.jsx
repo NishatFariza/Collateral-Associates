@@ -1,14 +1,14 @@
 import React from "react";
 import { Form } from "react-bootstrap";
 import { Link } from "react-router-dom";
-import "./Login.css";
+import "./SignUp.css";
 
-const Login = () => {
+const SignUp = () => {
   return (
     <div>
       <div className="mx-auto my-5 login-form p-5 rounded">
         <Form>
-          <h3 className="text-center mb-4">Login From</h3>
+          <h3 className="text-center mb-4">Sign Up Here</h3>
           <Form.Group className="mb-3" controlId="formBasicEmail">
             <Form.Label>Email address</Form.Label>
             <Form.Control type="email" placeholder="Enter email" />
@@ -31,17 +31,19 @@ const Login = () => {
           </button>
         </p>
         <p className="fw-bold text-muted">
-          Dont have an account ?
-          <Link
-            to="/signUp"
-            className="primary-color border-0 bg-white fw-bold"
-          >
-            Sign Up
+          You already have an account ?
+          <Link to="/login" className="primary-color border-0 bg-white fw-bold">
+            Log In
           </Link>
         </p>
+        <div className="d-flex justify-content-center align-items-center mb-4">
+          <div className="form-divider"></div>
+          <small className="mx-3">Or</small>
+          <div className="form-divider"></div>
+        </div>
       </div>
     </div>
   );
 };
 
-export default Login;
+export default SignUp;
