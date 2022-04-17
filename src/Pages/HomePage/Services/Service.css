@@ -1,0 +1,10 @@
+.service-wrap{
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.8);
+    background-blend-mode: overlay;
+    background-image: url(../../../images/services-image.jpg);
+}
+.service-title-wrap{
+    border-top: 0.0625em solid hsla(0, 0%, 100%, 0.16);
+    border-bottom: 0.0625em solid hsla(0, 0%, 100%, 0.16);
+}

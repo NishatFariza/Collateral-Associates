@@ -1,7 +1,8 @@
 import React from "react";
 import { Container, Nav, Navbar } from "react-bootstrap";
-import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import logo from "../../../images/brand-logo.png";
+import "./Header.css";
 
 const Header = () => {
   return (
@@ -25,6 +26,9 @@ const Header = () => {
               </Nav.Link>
               <Nav.Link className="me-4 text-white" as={Link} to="/blogs">
                 Blogs
+              </Nav.Link>
+              <Nav.Link className="me-4 text-white" as={Link} to="/blogs">
+               LogIn
               </Nav.Link>
             </Nav>
           </Navbar.Collapse>

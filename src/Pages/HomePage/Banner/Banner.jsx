@@ -16,16 +16,16 @@ const Banner = () => {
         </h1>
         <div className="divider"></div>
         <div className="btn-wrap mt-4">
-          <button className="py-3 px-4 border-0 rounded banner-btn text-white fw-bold me-3">
-            get a free quote
+          <button className="border-0 rounded banner-btn text-white fw-bold">
+            Get Free Quote
           </button>
-          <button className="py-3 px-4 bg-0 rounded banner-btn-2 text-white fw-bold">
-            legal services
+          <button className="rounded banner-btn-2 text-white fw-bold">
+            Legal Services
           </button>
         </div>
       </div>
       <div className="banner-img-wrap d-flex justify-content-center align-items-center">
-        <img className="w-100" src={bannerImg} alt="" />
+        <img className="banner-img" src={bannerImg} alt="" />
       </div>
     </div>
   );

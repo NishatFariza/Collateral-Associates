@@ -11,12 +11,10 @@
 }
 
 .banner-content-wrap{
-    /* padding: 4rem 2rem; */
     width: 60%;
 }
 .banner-content-wrap h1 {
     font-size: 3.8rem;
-    /* line-height: 1.5em; */
     max-width: 709px;
     margin: 0 auto;
 }
@@ -26,8 +24,10 @@
 }
 
 .banner-btn{
+    padding: 1rem 2rem;
     background-color: #af864d;
     transition: .5s;
+    margin-right: 1rem;
     
 }
 .banner-btn:hover{
@@ -35,6 +35,7 @@
 
 }
 .banner-btn-2{
+    padding: 1rem 2rem;
     background-color: transparent;
     border: 1px solid rgba(255, 255, 255, 0.12);
     transition: .5s;
@@ -57,17 +58,48 @@
  
 
 }
+
+.banner-img{
+    width: 100%;
+}
 /*Make banner responsive */
 @media screen and (max-width:576px){
-    .banner{
-            height: 800px;
-      
+    .banner {
+        height: 730px;
     }
     .banner-caption {
-        font-size: 14px;
+        font-size: 10px;
     }
     .banner-content-wrap h1 {
-        font-size: 1.2rem;
+        font-size: 1.6rem;
+    }
+    .banner-btn {
+        padding: .5rem 1.2rem;
+        margin-bottom: 1rem;
+        margin-right: 0;
+    }
+    .banner-btn-2 {
+        padding: .5rem 1.2rem;
+        
+    }
+    .banner-img{
+        width: 75%;
+    }
+
+    .banner-img-wrap {
+        width: 280px;
+        height: 280px;
     }
     
+}
+
+
+/*Tablet and desktop responsive*/
+@media screen and (min-width:577px) and (max-width:992px) {
+    .services-container{
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .services-title{
+        font-size: 28px;
+    }
 }
