@@ -1,0 +1,7 @@
+.img-wrap{
+    width: 100px;
+    height: 100px;
+}
+.service-card{
+    border: 0.0625em solid hsla(0, 0%, 100%, 0.16);
+}
