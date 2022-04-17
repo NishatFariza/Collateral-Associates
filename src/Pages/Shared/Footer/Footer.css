@@ -1,0 +1,15 @@
+.footer-wrapper{
+   border-bottom: .5px solid #af864d73;
+}
+.footer-icon{
+    width: 3rem;
+    height: 3rem;
+    font-size: 1rem;
+    border-radius: .5rem;
+    background-color: #af864d;
+    transition: .4s;
+
+}
+.footer-icon:hover{
+    background-color: #5B4628;
+}

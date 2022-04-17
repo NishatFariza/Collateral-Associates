@@ -1,28 +1,33 @@
 import React from "react";
-import { Container, Nav, Navbar} from "react-bootstrap";
+import { Container, Nav, Navbar } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import logo from "../../../images/brand-logo.png";
 
 const Header = () => {
   return (
     <div>
-      <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark">
-        <Container>
-          <Link to='/'>
-            <Navbar.Brand href="#home">
-              <img src={logo} alt="" />
-            </Navbar.Brand>
+      <Navbar collapseOnSelect expand="lg" bg="dark">
+        <Container className=" py-3">
+          <Link to="/">
+            <img className="w-75" src={logo} alt="" />
           </Link>
           <Navbar.Toggle aria-controls="responsive-navbar-nav" />
           <Navbar.Collapse id="responsive-navbar-nav">
-            <Nav className="me-auto">
-              <Nav.Link href="#features">Features</Nav.Link>
-              <Nav.Link href="#pricing">Pricing</Nav.Link>
-            </Nav>
-            <Nav>
-              <Nav.Link href="#deets">More deets</Nav.Link>
-              <Nav.Link eventKey={2} href="#memes">
-                Dank memes
+            <Nav className="ms-auto">
+              <Nav.Link className="me-4 text-white" href="#deets">
+                Home
+              </Nav.Link>
+              <Nav.Link className="me-4 text-white" href="#deets">
+                Services
+              </Nav.Link>
+              <Nav.Link className="me-4 text-white" href="#deets">
+                Checkout
+              </Nav.Link>
+              <Nav.Link className="me-4 text-white" href="#deets">
+                About Me
+              </Nav.Link>
+              <Nav.Link className="me-4 text-white" href="#deets">
+                Blogs
               </Nav.Link>
             </Nav>
           </Navbar.Collapse>
