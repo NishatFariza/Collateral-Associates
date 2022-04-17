@@ -5,6 +5,9 @@
 body{
   font-family: 'Open Sans', sans-serif;
 }
-.heading-font{
+.primary-font{
   font-family: 'DM Serif Display', serif;
+}
+.primary-color{
+  color: #AF864D;
 }

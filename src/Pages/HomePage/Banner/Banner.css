@@ -1,0 +1,35 @@
+.banner{
+    height: 100vh;
+    background-blend-mode: overlay;
+    background-color: rgba(0, 0, 0, 0.64);
+    background-image: url(../../../images/banner-bg.jpg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    
+
+}
+
+.banner-content-wrap{
+    padding: 4rem 2rem;
+    width: 60%;
+}
+.banner-content-wrap h1{
+   font-size: 3.8rem;
+   line-height: 1.5em;
+}
+
+.banner-caption{
+    color: #af864d;
+}
+
+
+.banner-img-wrap{
+ width: 300px;
+ height: 300px;
+ border-radius: 100%;
+ background-color: rgba(119, 119, 119, 0.274);
+ background-image: url();
+ 
+
+}
