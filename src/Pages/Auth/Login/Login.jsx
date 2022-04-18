@@ -1,33 +1,80 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { Form } from "react-bootstrap";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import "./Login.css";
 import { FcGoogle } from "react-icons/fc";
+import {
+  useSignInWithEmailAndPassword,
+  useSignInWithGoogle,
+} from "react-firebase-hooks/auth";
+import auth from "../../../firebase.init";
+import toast from "react-hot-toast";
 
 const Login = () => {
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  const deep = useNavigate();
+
+  console.log(email, password);
+  const [signInWithEmailAndPassword, user, loading, error] =
+    useSignInWithEmailAndPassword(auth);
+
+  const [signInWithGoogle, userGoogle, loading1, error1] =
+    useSignInWithGoogle(auth);
+  // const [signInWithGoogle, user, loading, error] = useSignInWithGoogle(auth);
+
+  if (error1) {
+    console.log(error1);
+  }
+
+  if (error) {
+    toast.error("Something Error");
+    console.log(error);
+  }
+
+  useEffect(() => {
+    if (user || userGoogle) {
+      deep("/");
+    }
+  }, [deep, user, userGoogle]);
+
+  const handleEmailBlur = (event) => {
+    setEmail(event.target.value);
+  };
+  const handlePasswordBlur = (event) => {
+    setPassword(event.target.value);
+  };
+
+  const handleLogInUser = (event) => {
+    event.preventDefault();
+    console.log(email, password);
+
+    signInWithEmailAndPassword(email, password);
+  };
+
   return (
     <div>
       <div className="mx-auto my-5 login-form p-5 rounded">
-        <Form>
+        <Form onSubmit={handleLogInUser}>
           <h3 className="text-center mb-4 fw-bold">Login From</h3>
           <Form.Group className="mb-3" controlId="formBasicEmail">
             <Form.Label className="fw-bold text-dark">Email address</Form.Label>
-            <Form.Control type="email" placeholder="Enter email" required />
+            <Form.Control
+              onBlur={handleEmailBlur}
+              type="email"
+              placeholder="Enter email"
+              required
+            />
             <Form.Text className="text-muted">
               We'll never share your email with anyone else.
             </Form.Text>
           </Form.Group>
           <Form.Group className="mb-3" controlId="formBasicPassword">
             <Form.Label className="fw-bold text-dark">Password</Form.Label>
-            <Form.Control type="password" placeholder="Password" required />
-          </Form.Group>
-          <Form.Group className="mb-3" controlId="formBasicPassword">
-            <Form.Label className="fw-bold text-dark">
-              Confirm Password
-            </Form.Label>
             <Form.Control
+              onBlur={handlePasswordBlur}
               type="password"
-              placeholder="Confirm Password"
+              placeholder="Password"
               required
             />
           </Form.Group>
@@ -57,7 +104,10 @@ const Login = () => {
           <div className="form-divider"></div>
         </div>
         <div className="d-grid col-12 mx-auto">
-          <button className="google-btn primary-font py-2 rounded fs-6">
+          <button
+            onClick={() => signInWithGoogle()}
+            className="google-btn primary-font py-2 rounded fs-6"
+          >
             <FcGoogle className="fs-4 me-4"></FcGoogle>
             Continue With Google
           </button>
