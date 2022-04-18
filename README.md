@@ -12,6 +12,6 @@ Live Link : [https://collateral-associates-10.web.app/]
 ## Used Framwork / libary technology in this Project
 
 - React, JavaScript Framwork and libary
-- Tailwind, css Framwork
+- Bootstrap, css Framwork
 - Firebase Authenticaiton for Authenticaiton
 - React icons for Icon
