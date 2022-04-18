@@ -5,7 +5,8 @@
 }
 .service-card{
     cursor: pointer;
-    border: 0.0625em solid hsla(0, 0%, 100%, 0.16);
+    border: 0.0625em solid hsla(0, 0%, 100%, 0.068);
+    border-top: 0;
 }
 .card-title{
     color: #fff;
@@ -18,4 +19,14 @@
     color: #AF864D;
     
 
+}
+.service-card-btn{
+    padding: .8rem 1.5rem;
+    background-color: transparent;
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    transition: .5s;
+}
+.service-card-btn:hover{
+    background-color: #5B4628;
+    border: 1px solid rgba(255, 255, 255, 0.12);
 }

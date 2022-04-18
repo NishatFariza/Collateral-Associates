@@ -6,7 +6,7 @@ const Service = ({ service }) => {
   const { img, name, price, discription } = service;
 
   return (
-    <div className="service-card mx-auto d-flex justify-content-center align-items-center flex-column px-3 py-5">
+    <div className="service-card mx-auto d-flex justify-content-center align-items-center flex-column px-3 py-5 rounded">
       <div className="img-wrap rounded-circle overflow-hidden d-flex justify-content-center align-items-center">
         <img className="w-50 h-50 rounded-circle " src={img} alt="" />
       </div>
@@ -17,7 +17,7 @@ const Service = ({ service }) => {
           : discription}
       </p>
       <span className="primary-color fs-5 fw-bold mb-5">{price}</span>
-      <button className="rounded banner-btn-2 services-title-btn text-white fw-bold">
+      <button className="rounded service-card-btn text-white fw-bold">
         Booking Now
       </button>
     </div>
