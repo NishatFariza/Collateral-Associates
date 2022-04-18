@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { Form } from "react-bootstrap";
-import { Link, useNavigate } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import "./Login.css";
 import { FcGoogle } from "react-icons/fc";
 import {
@@ -9,8 +9,12 @@ import {
 } from "react-firebase-hooks/auth";
 import auth from "../../../firebase.init";
 import toast from "react-hot-toast";
+import { sendPasswordResetEmail } from "firebase/auth";
 
 const Login = () => {
+  let location = useLocation();
+  let from = location.state?.from?.pathname || "/";
+
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const deep = useNavigate();
@@ -29,19 +33,22 @@ const Login = () => {
 
   if (error) {
     toast.error("Something Error");
-    console.log(error);
+    // console.log(error);
   }
 
   useEffect(() => {
     if (user || userGoogle) {
-      deep("/");
+      deep(from);
     }
-  }, [deep, user, userGoogle]);
+  }, [deep, user, userGoogle, from]);
 
   const handleEmailBlur = (event) => {
     setEmail(event.target.value);
   };
   const handlePasswordBlur = (event) => {
+    if (password.length >= 6) {
+      toast.error("Your password is too less");
+    }
     setPassword(event.target.value);
   };
 
@@ -50,6 +57,20 @@ const Login = () => {
     console.log(email, password);
 
     signInWithEmailAndPassword(email, password);
+  };
+
+  const handleForgetPassword = () => {
+    sendPasswordResetEmail(auth, email)
+      .then(() => {
+        toast.success("Mail Sent!", { id: "signup" });
+      })
+      .catch((error) => {
+        const errorCode = error.code;
+        if (errorCode == "auth/missing-email") {
+          toast.error("Please Enter Email", { id: "signup" });
+          console.log(errorCode);
+        }
+      });
   };
 
   return (
@@ -84,7 +105,10 @@ const Login = () => {
         </Form>
         <p className="mb-0 mt-3 fw-bold text-muted">
           Forgot Password?
-          <button className="primary-color border-0 bg-white fw-bold">
+          <button
+            onClick={handleForgetPassword}
+            className="primary-color border-0 bg-white fw-bold"
+          >
             Click Here
           </button>
         </p>

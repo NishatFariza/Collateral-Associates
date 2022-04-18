@@ -19,3 +19,11 @@
 .footer-link:hover{
     color: #fd9400;
 }
+
+/*Make Responsive for mobile*/
+@media screen and (max-width:576px){
+    .small-font{
+        font-size: 10px;
+    }
+    
+}

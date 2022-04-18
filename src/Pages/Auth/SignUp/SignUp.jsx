@@ -9,6 +9,7 @@ import {
 } from "react-firebase-hooks/auth";
 import auth from "../../../firebase.init";
 import toast from "react-hot-toast";
+import { sendPasswordResetEmail } from "firebase/auth";
 
 const SignUp = () => {
   const [name, setName] = useState("");
@@ -48,6 +49,11 @@ const SignUp = () => {
 
   const handleCreateUser = (event) => {
     event.preventDefault();
+    if (email == "" || password == "" || confirmPassword == "") {
+      toast.error("Input field is empty");
+      return;
+    }
+
     if (password !== confirmPassword) {
       toast.error("Password is not matched");
       return;
