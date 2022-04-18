@@ -13,3 +13,9 @@
 .footer-icon:hover{
     background-color: #5B4628;
 }
+.footer-link{
+    transition: .5s;
+}
+.footer-link:hover{
+    color: #fd9400;
+}

@@ -30,7 +30,7 @@ const Footer = () => {
         <small className="text-light me-3">
           Made By
           <a
-            className="text-decoration-none primary-color ms-2 fw-bold"
+            className="text-decoration-none primary-color ms-2 fw-bold footer-link"
             href="https://github.com/NishatFariza"
           >
             Nishat Fariza
