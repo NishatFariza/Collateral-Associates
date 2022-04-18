@@ -22,7 +22,7 @@ const Header = () => {
                 Checkout
               </Nav.Link>
               <Nav.Link className="me-4 text-white" as={Link} to="/about">
-                About Me
+                About
               </Nav.Link>
               <Nav.Link className="me-4 text-white" as={Link} to="/blogs">
                 Blogs

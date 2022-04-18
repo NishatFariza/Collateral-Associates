@@ -10,7 +10,7 @@ const Footer = () => {
   const year = today.getFullYear();
   return (
     <div className="py-3 bg-dark m-4 rounded text-center">
-      <div className="w-75 mx-5 p-4 footer-wrapper d-flex justify-content-center align-items-center">
+      <div className="mx-5 p-4 footer-wrapper d-flex justify-content-center align-items-center">
         <div className="footer-icon me-4 d-flex justify-content-center  align-items-center ">
           <Link to="/">
             {<FaFacebookF className="text-white"></FaFacebookF>}
@@ -25,8 +25,17 @@ const Footer = () => {
           </Link>
         </div>
       </div>
-      <div>
-        <p className="w-75 mx-auto p-3 text-muted">Copyright &copy; {year}</p>
+      <div className="d-flex justify-content-between align-items-center mx-5 py-3">
+        <small className="text-light ms-3">Copyright &copy; {year}</small>
+        <small className="text-light me-3">
+          Made By
+          <a
+            className="text-decoration-none primary-color ms-2 fw-bold"
+            href="https://github.com/NishatFariza"
+          >
+            Nishat Fariza
+          </a>
+        </small>
       </div>
     </div>
   );
