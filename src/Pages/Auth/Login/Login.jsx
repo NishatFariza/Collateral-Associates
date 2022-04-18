@@ -11,15 +11,25 @@ const Login = () => {
         <Form>
           <h3 className="text-center mb-4 fw-bold">Login From</h3>
           <Form.Group className="mb-3" controlId="formBasicEmail">
-            <Form.Label>Email address</Form.Label>
-            <Form.Control type="email" placeholder="Enter email" />
+            <Form.Label className="fw-bold text-dark">Email address</Form.Label>
+            <Form.Control type="email" placeholder="Enter email" required />
             <Form.Text className="text-muted">
               We'll never share your email with anyone else.
             </Form.Text>
           </Form.Group>
           <Form.Group className="mb-3" controlId="formBasicPassword">
-            <Form.Label>Password</Form.Label>
-            <Form.Control type="password" placeholder="Password" />
+            <Form.Label className="fw-bold text-dark">Password</Form.Label>
+            <Form.Control type="password" placeholder="Password" required />
+          </Form.Group>
+          <Form.Group className="mb-3" controlId="formBasicPassword">
+            <Form.Label className="fw-bold text-dark">
+              Confirm Password
+            </Form.Label>
+            <Form.Control
+              type="password"
+              placeholder="Confirm Password"
+              required
+            />
           </Form.Group>
           <button className="border-0 rounded login-btn text-white fw-bold">
             Log in
