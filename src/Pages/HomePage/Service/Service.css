@@ -4,5 +4,18 @@
     background-color: rgba(255, 255, 255, 0.199);
 }
 .service-card{
+    cursor: pointer;
     border: 0.0625em solid hsla(0, 0%, 100%, 0.16);
+}
+.card-title{
+    color: #fff;
+    font-size: 25px;
+    font-weight: 28px;
+    transition: .5s;
+
+}
+.card-title:hover{
+    color: #AF864D;
+    
+
 }

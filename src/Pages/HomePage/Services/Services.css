@@ -7,10 +7,25 @@
     border-top: 0.0625em solid hsla(0, 0%, 100%, 0.16);
     border-bottom: 0.0625em solid hsla(0, 0%, 100%, 0.16);
 }
+.services-title-wrap h2{
+   line-height: 47px;
+}
 .services-grid-container{
     display: grid;
     grid-template-columns: repeat(3, 1fr);
    
+}
+.services-title-btn{
+    padding: .6rem 1rem;
+    background-color: transparent;
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    transition: .5s;
+    font-size: 13px;
+    line-height: 20px;
+}
+.services-title-btn:hover{
+    background-color: #5B4628;
+    border: 1px solid rgba(255, 255, 255, 0.12);
 }
 
 /*Make Mobile Responsive*/
