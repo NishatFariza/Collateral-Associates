@@ -1,20 +1,37 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { Form } from "react-bootstrap";
-import { Link } from "react-router-dom";
+import { Link, Navigate, useNavigate } from "react-router-dom";
 import "./SignUp.css";
 import { FcGoogle } from "react-icons/fc";
-import { useCreateUserWithEmailAndPassword } from "react-firebase-hooks/auth";
+import {
+  useCreateUserWithEmailAndPassword,
+  useSignInWithGoogle,
+} from "react-firebase-hooks/auth";
 import auth from "../../../firebase.init";
+import toast from "react-hot-toast";
 
 const SignUp = () => {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [confirmPassword, setConfirmPassword] = useState("");
-  const [error, setError] = useState("");
+  const deep = useNavigate();
 
-  // const [createUserWithEmailAndPassword, user, loading, error] =
-  //   useCreateUserWithEmailAndPassword(auth);
+  const [createUserWithEmailAndPassword, user, loading, error] =
+    useCreateUserWithEmailAndPassword(auth);
+
+  const [signInWithGoogle, userGoogle] = useSignInWithGoogle(auth);
+
+  if (error) {
+    toast.error("Something Error");
+    console.log(error);
+  }
+
+  useEffect(() => {
+    if (user || userGoogle) {
+      deep("/");
+    }
+  }, [deep, user, userGoogle]);
 
   const handleNameBlur = (event) => {
     setName(event.target.value);
@@ -32,10 +49,10 @@ const SignUp = () => {
   const handleCreateUser = (event) => {
     event.preventDefault();
     if (password !== confirmPassword) {
-      setError("Your two password didn't match");
+      toast.error("Password is not matched");
       return;
     }
-    // createUserWithEmailAndPassword();
+    createUserWithEmailAndPassword(email, password);
   };
 
   return (
@@ -88,7 +105,6 @@ const SignUp = () => {
             Log in
           </button>
         </Form>
-        <p className="text-danger">{error}</p>
         <p className="mb-0 mt-3 fw-bold text-muted">
           Forgot Password?
           <button className="primary-color border-0 bg-white fw-bold">
@@ -110,7 +126,10 @@ const SignUp = () => {
           <div className="form-divider"></div>
         </div>
         <div className="d-grid col-12 mx-auto">
-          <button className="google-btn primary-font py-2 rounded fs-6">
+          <button
+            onClick={() => signInWithGoogle()}
+            className="google-btn primary-font py-2 rounded fs-6"
+          >
             <FcGoogle className="fs-4 me-4"></FcGoogle>
             Continue With Google
           </button>

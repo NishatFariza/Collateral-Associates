@@ -1,5 +1,5 @@
 import 'bootstrap/dist/css/bootstrap.min.css';
-
+import toast, { Toaster } from 'react-hot-toast';
 import { Route, Routes } from 'react-router-dom';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css';
@@ -17,6 +17,7 @@ function App() {
   return (
     <div className="App">
       <Header/>
+      <Toaster/>
       <Routes>
         <Route path='/'element={<Home/>}></Route>
         <Route path='/login' element={<Login></Login>}></Route>
