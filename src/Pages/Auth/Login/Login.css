@@ -4,7 +4,7 @@
 }
 
 .login-btn{
-    padding: .6rem 1.6rem;
+    padding: .5rem 1.5rem;
     background-color: #af864d;
     transition: .5s;
     margin-right: 1rem;
@@ -13,6 +13,18 @@
 .login-btn:hover{
     background-color: #5B4628;
 
+}
+
+.login-link{
+    text-decoration: none;
+}
+.login-link:hover{
+    color: #AF864D;
+}
+
+.google-btn{
+    color: #141414e0;
+   border: .5px solid #af864d6b;
 }
 
 /*Make responsive of tablet*/
