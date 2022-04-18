@@ -1,0 +1,30 @@
+.notFound-wrapper{
+    background-image: url(../../../images/5fcf428088aa1b6dd40ca6c1_body-backgound.svg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.notFound-wrapper{
+    width: 80%;
+    margin: 0 auto;
+    padding: 6rem 0 ;
+}
+
+.notFound-wrapper p{
+    font-size: 61px;
+}
+.small-text{
+    color: #af864d;
+}
+
+.notFound-btn{
+    padding: 1rem 2rem;
+    background-color: #af864d;
+    transition: .5s;
+    margin-right: 1rem;
+    text-decoration: none;
+}
+.notFound-btn:hover{
+    background-color: #5B4628;
+
+}
