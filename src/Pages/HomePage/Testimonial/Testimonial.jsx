@@ -24,8 +24,8 @@ const Testimonial = () => {
               <Card.Img src={client2} />
             </div>
             <Card.Body>
-              <h4 className="primary-color">Rachel Ferguson</h4>
-              <small>
+              <h4 className="primary-color primary-font">Rachel Ferguson</h4>
+              <small className="fw-bold text-muted">
                 Lawyers apply the law to specific cases. They investigate the
                 facts and the evidence by conferring with their clients and
                 reviewing documents, and they prepare and file the pleadings in
@@ -38,8 +38,8 @@ const Testimonial = () => {
               <Card.Img src={client1} />
             </div>
             <Card.Body>
-              <h4 className="primary-color">Rachel Ferguson</h4>
-              <small>
+              <h4 className="primary-color primary-font">Elna Goyette</h4>
+              <small className="fw-bold text-muted">
                 The family lawyers and law clerks of Stephen Durbin and
                 Associates are dedicated to your cause. Rest assured that our
                 hearts and souls are brought to bear on your individual case.
@@ -49,8 +49,8 @@ const Testimonial = () => {
           <Card className="border rounded">
             <Card.Img src={client3} />
             <Card.Body>
-              <h4 className="primary-color">Rachel Ferguson</h4>
-              <small>
+              <h4 className="primary-color primary-font">Harvey Brown</h4>
+              <small className="fw-bold text-muted">
                 The family lawyers and law clerks of Stephen Durbin and
                 Associates are dedicated to your cause. Rest assured that our
                 hearts and souls are brought to bear on your individual case.
@@ -60,8 +60,8 @@ const Testimonial = () => {
           <Card className="border rounded">
             <Card.Img src={client4} />
             <Card.Body>
-              <h4 className="primary-color">Rachel Ferguson</h4>
-              <small>
+              <h4 className="primary-color primary-font">Michele Mraz</h4>
+              <small className="fw-bold text-muted">
                 Lawyers apply the law to specific cases. They investigate the
                 facts and the evidence by conferring with their clients and
                 reviewing documents, and they prepare and file the pleadings in
