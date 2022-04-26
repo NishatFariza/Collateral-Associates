@@ -4,7 +4,10 @@ import { Accordion } from "react-bootstrap";
 const Blogs = () => {
   return (
     <div className="w-75 mx-auto my-5 py-5">
-      <h2 className="text-center primary-font mb-5">FAQ Blogs</h2>
+      <h2 className="text-center primary-font primary-color fs-2 ">
+        FAQ Blogs
+      </h2>
+      <div className="divider  mb-5"></div>
       <Accordion>
         <Accordion.Item eventKey="0">
           <Accordion.Header className="primary-font">
