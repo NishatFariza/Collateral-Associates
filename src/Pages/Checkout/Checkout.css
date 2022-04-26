@@ -1,5 +1,5 @@
-.banner-btn{
-    padding: .8rem 1.5rem;
+.checkout-btn{
+    padding: .6rem 1.5rem;
     background-color: #af864d;
     transition: .5s;
     margin-right: 1rem;
@@ -7,7 +7,7 @@
     color: #fff;
     
 }
-.banner-btn:hover{
+.checkout-btn:hover{
     background-color: #5B4628;
 
 }
