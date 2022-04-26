@@ -1,0 +1,13 @@
+.banner-btn{
+    padding: .8rem 1.5rem;
+    background-color: #af864d;
+    transition: .5s;
+    margin-right: 1rem;
+    border: none;
+    color: #fff;
+    
+}
+.banner-btn:hover{
+    background-color: #5B4628;
+
+}
