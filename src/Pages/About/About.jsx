@@ -3,7 +3,8 @@ import React from "react";
 const About = () => {
   return (
     <div className="py-lg-5 py-3 w-75 mx-auto">
-      <h2 className="text-center primary-color primary-font">About Me</h2>
+      <h2 className="text-center primary-color primary-font fs-1">About Me</h2>
+      <div className="divider"></div>
       <p className="text-muted py-3 text-center">
         Hello There, Welcome! This is{" "}
         <span className="primary-color primary-font"> Nishat Fariza</span>. I'm
