@@ -13,6 +13,7 @@ import Checkout from './Pages/Checkout/Checkout';
 import About from './Pages/About/About';
 import Blogs from './Pages/Blogs/Blogs';
 import RequiredAuth from './RequiredAuth/RequiredAuth';
+import Contact from './Pages/Contact/Contact';
 
 function App() {
   return (
@@ -30,6 +31,7 @@ function App() {
         }></Route>
         <Route path='/about' element={<About></About>}></Route>
         <Route path='/blogs' element={<Blogs></Blogs>}></Route>
+        <Route path='/contact' element={<Contact></Contact>}></Route>
         <Route path='*' element={<NotFound></NotFound>}></Route>
       </Routes>
       <Footer/>
