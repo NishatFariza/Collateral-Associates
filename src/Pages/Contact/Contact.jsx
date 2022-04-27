@@ -3,9 +3,14 @@ import "./Contact.css";
 
 const Contact = () => {
   return (
-    <div className="mx-4 text-center">
-      <p>DON'T HESITATE</p>
-      <h2>Contact Me</h2>
+    <div className="mx-auto text-center py-5 w-75">
+      <div className="text-center">
+        <small className="small-text text-uppercase fw-bold">
+          DON'T HESITATE
+        </small>
+        <p className="primary-font">Contact Me</p>
+        <div className="divider mb-5"></div>
+      </div>
     </div>
   );
 };
