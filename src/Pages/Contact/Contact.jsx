@@ -8,7 +8,7 @@ const Contact = () => {
         <small className="small-text text-uppercase fw-bold">
           DON'T HESITATE
         </small>
-        <p className="primary-font">Contact Me</p>
+        <p className="primary-font contact-title">Contact Me</p>
         <div className="divider mb-5"></div>
       </div>
     </div>
