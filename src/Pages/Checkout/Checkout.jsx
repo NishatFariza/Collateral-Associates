@@ -17,7 +17,7 @@ const Checkout = () => {
   };
   return (
     <Fade bottom>
-      <div className="w-lg-50 w-50 mx-auto my-5 shadow-lg p-5">
+      <div className="w-lg-50 w-50 mx-auto my-5 shadow-lg p-5 rounded-3">
         <h4 className="primary-text primary-color text-center mb-4">
           CheckOut
         </h4>
